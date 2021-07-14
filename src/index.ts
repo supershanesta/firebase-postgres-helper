@@ -1,5 +1,5 @@
 import commander from 'commander'
-import { create, list, setClaim, setClaimList } from './command'
+import { create, list, setClaim, setClaimList, sync } from './command'
 
 const start = async () => {
   commander
@@ -24,6 +24,10 @@ const start = async () => {
     .requiredOption('-n, --display-name <displayName>', 'User display name')
     .requiredOption('-p, --password <password>', 'User password')
     .action(create)
+
+  commander
+    .command('sync')
+    .action(sync)
 
   await commander.parseAsync()
 }

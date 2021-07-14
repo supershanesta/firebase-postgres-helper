@@ -14,4 +14,5 @@ Commands:
   setClaimList [options]
   create [options]
   help [command]          display help for command
+  sync
 ```
